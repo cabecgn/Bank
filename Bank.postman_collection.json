@@ -13,14 +13,7 @@
 					"type": "noauth"
 				},
 				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic YWRtaW46cGFzc0FkbWlu",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"url": {
 					"raw": "http://localhost:8899/company/companiesAccessionLastMonth",
 					"protocol": "http",
