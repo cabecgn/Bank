@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "f31117ce-5e83-4ab0-b6b2-9a4927e3cbec",
+		"name": "Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21063899"
+	},
+	"item": [
+		{
+			"name": "companiesAccessionLastMonth",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc0FkbWlu",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8899/company/companiesAccessionLastMonth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"company",
+						"companiesAccessionLastMonth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "companiesTransfersLastMonth",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "passAdmin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8899/company/companiesTransfersLastMonth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"company",
+						"companiesTransfersLastMonth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create company",
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "WWW-Authorization",
+						"value": "Basic YWRtaW46cGFzc0FkbWlu",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cuit\": \"20124567893\",\n    \"companyName\": \"compania ACME A\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8899/company/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8899",
+					"path": [
+						"company",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
